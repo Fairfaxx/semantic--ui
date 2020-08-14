@@ -1,17 +1,17 @@
-.main-heading{
-    text-align: center;
-    font-size: 10rem;
+.main-heading {
+	text-align: center;
 }
 
-.main-div{
-   display: flex;
-   margin-bottom: 50px;
-} 
+.main-div {
+	display: flex;
+	margin-bottom: 50px;
+	flex-wrap: wrap;
+}
 
-.ui.card [class*="right floated"], .ui.cards>.card [class*="right floated"]{
+/* .ui.card [class*="right floated"], .ui.cards>.card [class*="right floated"]{
     float: left;
 }
 
 .ui.cards>.card {
     margin: 3rem;
-}
+} */

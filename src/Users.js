@@ -1,33 +1,36 @@
 import React from 'react';
 import './Users.css';
+import Api from './Api';
 
 
-// const users = [{ 
-//    friend1: {
-//         id:1,
-//         name: 'Negro Lanza',
-//         hobby: 'Cocina',
-//         hincha: 'River'
-//     },
+const users = [{ 
+   
+        id:1,
+        name: 'Negro Lanza',
+        hobby: 'Cocina',
+        hincha: 'River'
+    },
 
-//     friend2: {
-//         id: 2,
-//         name: 'Emi',
-//         hobby: 'Plantar Porro',
-//         hincha: 'Racing'
-//     },
+    {
+        id: 2,
+        name: 'Emi',
+        hobby: 'Plantar Porro',
+        hincha: 'Racing'
+    },
 
-//     friend3: {
-//         id: 3,
-//         name: 'Aleli',
-//         hobby: 'Bitcoins',
-//         hincha: 'Boca'
-//     }
-// }];
+    {
+        id: 3,
+        name: 'Aleli',
+        hobby: 'Bitcoins',
+        hincha: 'Boca'
+    }
+];
+//  
 
+  let friends = users.map(user => user.name)
+  console.log(friends)
 
-//   let nombres = users.map(user => ({nombre: users.name, hobbys: users.hobby }));
-//   console.log(nombres)
+  
 
 
   const Users = (props) => {
@@ -45,18 +48,19 @@ import './Users.css';
                             <h2>{props.name}</h2>
                             </div>
                             <div className="meta">
-                            <h3>Hobby: {props.hobby}</h3>
+                            <h3>Hobby: {props.hobby} </h3>
+                            <h3>Quote: {<Api cleanQuote/>}</h3>
                         </div>
                         <div className="description">
                             <h3 className="hincha">Hincha de: {props.hincha}</h3>
                         </div>
                         </div>
                     <div className="extra content">
-                    <span className="right floated">
-                        <h3>Joined at the age of {props.jam}</h3>
-                    </span>
+                        <span className="right floated">
+                            <h3>Joined at the age of {props.jam}</h3>
+                        </span>
                     </div>
-                </div> 
+                    </div> 
                 </div>   
               </div>
               

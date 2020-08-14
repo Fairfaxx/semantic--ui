@@ -1,29 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Users from './Users';
+import Test from './Test';
+// import Users from './Users';
+// import NewCard from './NewCard';
+import Api from './Api';
+import { propTypes } from 'react-bootstrap/esm/Image';
+// import Card from './Card';
+// import Form from './Form.jsx';
 
-const App = () => {
+
+
+const App = (props) => {
     return (
-        <div className="">  
-            <h1 className="main-heading">La #20</h1>   
-            <Users className="four wide column"
-            name="Aleli"
-            hobby="Bitcoins"
-            hincha='Boca'
-            jam= '18' 
-            img = "https://i.pinimg.com/474x/6a/83/84/6a8384df968cbd9dadbb4472c674cca1.jpg" 
 
-            />
+        <div >
+            <h1 className="main-heading">La #20</h1>
+            <div className="main-div d-flex m-3">
 
-            <Users className="four wide column"
-            name="Negro Lanza"
-            hobby="Cocinar Fumado"
-            hincha='River'
-            jam= '20'
-            img = "https://i.pinimg.com/564x/41/ca/b9/41cab9716a1c593c51bf0ea73e715c91.jpg" 
-            />
+                <Api />
+                <Api />
+                <Api />
+                <Api />
+                <Api />
+                <Api />
+                <Api />
+                <Api />
+            </div>
         </div>
     )
 };
 
-ReactDOM.render( <App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));

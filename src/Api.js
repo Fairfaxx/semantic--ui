@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Users from './Users.css';
+import NewCardBtn from './NewCardBtn';
 
 
 // class Api extends React.Component {
@@ -34,21 +35,21 @@ import Users from './Users.css';
 
 
 
-const Api = () => {
+const Api = (props) => {
     const [quote, setQuote] = React.useState([]);
-    const [card, setCard] = React.useState(null);
-    console.log(quote)
-    console.log(card)
+
+    console.log(quote[0])
+
 
     const callApi = () => {
-
+        console.log('jiji')
     }
 
     useEffect(() => {
         const quotes = async () => {
             const { data } = await axios.get('https://thesimpsonsquoteapi.glitch.me/quotes');
 
-            console.log(data)
+            console.log(data[0].character)
             setQuote(data);
 
         };
@@ -66,12 +67,12 @@ const Api = () => {
             {
                 quote.map((item, index) => (
                     <div key={index}>
-                        <div className="card" style={{ width: "28rem", margin: '3rem' }}>
+                        <div className="card" style={{ width: "21rem", margin: '1.5rem' }}>
                             <img src={item.image} className="card-img-top" alt="..." />
                             <div className="card-body">
-                                <h5 className="card-title">{item.quote}</h5>
-                                <p className="card-text">{item.character}</p>
-                                <button onClick={() => callApi()} className="btn btn-primary">Go somewhere</button>
+                                <h4 className="card-title">{props.name} </h4>
+                                <h5 className="card-title">{item.character}</h5>
+                                <p className="card-text">{item.quote}</p>
                             </div>
                         </div>
                     </div>
